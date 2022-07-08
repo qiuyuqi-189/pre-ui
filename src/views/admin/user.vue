@@ -67,7 +67,7 @@
 
           <el-table-column label="部门" align="center">
             <template slot-scope="scope">
-              <div>{{ scope.row.deptName }}</div>
+              <div>{{ scope.row.deptId }}</div>
             </template>
           </el-table-column>
 
@@ -124,7 +124,7 @@
               <popup-tree-input
                 :data="deptData"
                 :props="deptTreeProps"
-                :prop="dataForm.deptName"
+                :prop="dataForm.deptId"
                 :node-key="dataForm.deptId"
                 :current-change-handle="deptTreeCurrentChangeHandle"
               />
@@ -258,7 +258,7 @@ export default {
     // 部门菜单树选中
     deptTreeCurrentChangeHandle(data) {
       this.dataForm.deptId = data.deptId
-      this.dataForm.deptName = data.name
+      this.dataForm.deptId = data.name
     },
     // 加载用户列表
     adminList: function() {
